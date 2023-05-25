@@ -1,7 +1,7 @@
 import { Box, Divider, Image, Input, InputGroup, InputLeftElement, InputRightElement, Select, Stack, Text } from '@chakra-ui/react'
+import logo from "../../Images/digitic_logo.png"
 
 import {Search2Icon} from "@chakra-ui/icons"
-
 import {CgMenuGridO} from "react-icons/cg"
 import compare from "../../Images/compare.svg"
 import cart  from "../../Images/cart.svg"
@@ -15,7 +15,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Productsearch } from '../../Redux/Products/action'
 import {FaSearch} from "react-icons/fa"
 import { SearchReasultlist } from './SearchReasultlist'
-import logo from "../../Images/digitic_logo.png"
+
 const Navbar = () => {
   const [search,setsearch]=useState()
 
@@ -35,15 +35,13 @@ const Navbar = () => {
         <nav className={styled.topnav}>
           <Link  to="/"> <Image bgColor={"black"} w="180px" h="50px" src={logo}/></Link>
           
-           <div className={styled.inputtop} >           
-          
+           <div className={styled.inputtop} >          
               <FaSearch className={styled.search_icon} />
-              <input
-                placeholder="Type to search..."
-                value={search}
-                onChange={(e) => setsearch(e.target.value)}
-              />
+              <input placeholder="Type to search..." value={search} onChange={(e) => setsearch(e.target.value)}/>
+                
+         
           { <SearchReasultlist results={data} />}
+          
             </div>
 
            <div className={styled.topnavright}>
