@@ -1,7 +1,8 @@
+
 import './App.css';
+import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import MainRouter from './Pages/MainRouter';
-import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -12,4 +13,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

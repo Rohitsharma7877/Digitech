@@ -7,7 +7,7 @@ const Collection=(dispatch)=> {
  
 dispatch({type:types.GET_Collection_REQUEST})
   
-return axios.get('http://localhost:3005/collection/')
+return axios.get('http://localhost:3008/collection/')
   .then((r) => {
       dispatch({type:types.GET_Collection_SUCCESS, payload:r.data})
       console.log(r)

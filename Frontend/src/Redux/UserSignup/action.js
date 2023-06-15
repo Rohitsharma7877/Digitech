@@ -4,7 +4,7 @@ import axios from "axios"
 const signup = (payload)=>(dispatch)=> {
     // const navigate=useNavigate()
     dispatch({type:types.GET_Signup_REQUEST})
-      return axios.post('http://localhost:3005/user/signup', payload)
+      return axios.post('http://localhost:3008/user/signup', payload)
       .then((r) => {
           dispatch({type:types.GET_Signup_SUCCESS, payload:r.data})
           console.log(r)
@@ -20,7 +20,7 @@ const signup = (payload)=>(dispatch)=> {
     const getsignup =(dispatch)=> {
         // const navigate=useNavigate()
         dispatch({type:types.GET_getSignup_REQUEST})
-          return axios.get('http://localhost:8004/user')
+          return axios.get('http://localhost:3008/user')
           .then((r) => {
               dispatch({type:types.GET_getSignup_SUCCESS, payload:r.data})
               console.log(r)
@@ -35,7 +35,7 @@ const signup = (payload)=>(dispatch)=> {
 
         const remove =(id)=>(dispatch)=>{
             dispatch({type:types.GET_delete_REQUEST})
-             return axios.delete(`http://localhost:8004/user/delete/${id}`)
+             return axios.delete(`http://localhost:3008/user/delete/${id}`)
              .then((r) => {
                  dispatch({type:types.GET_delete_SUCCESS})
                  console.log(r)
@@ -50,7 +50,7 @@ const signup = (payload)=>(dispatch)=> {
     const signin = (payload)=>(dispatch)=> {
         // const navigate=useNavigate()
         dispatch({type:types.GET_Signin_REQUEST})
-          return axios.post('http://localhost:3005/user/login', payload)
+          return axios.post('http://localhost:3008/user/login', payload)
           .then((r) => {
               dispatch({type:types.GET_Signin_SUCCESS, payload:r.data})
               localStorage.setItem("token_key",r.data.token)

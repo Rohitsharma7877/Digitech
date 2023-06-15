@@ -5,7 +5,7 @@ const getcompare=(dispatch)=> {
  
     dispatch({type:types.Get_compare_Request})
       
-    return axios.get('http://localhost:3005/compare/',{
+    return axios.get('http://localhost:3008/compare/',{
         headers:{
             "Authorization":`Bearer ${localStorage.getItem("token_key")}`
         }
@@ -29,7 +29,7 @@ const getcompare=(dispatch)=> {
 
 const postcompare=(data)=>(dispatch)=>{
     dispatch({type:types.Post_compare_Request})
-    return axios.post(`http://localhost:3005/compare/newpost/`,data,{
+    return axios.post(`http://localhost:3008/compare/newpost/`,data,{
         headers:{
             "Authorization":`Bearer ${localStorage.getItem("token_key")}`
         }
@@ -45,7 +45,7 @@ const postcompare=(data)=>(dispatch)=>{
 
 const deletecompare=(id)=>(dispatch)=>{
     dispatch({type:types.Delete_compare_Request})
-    return axios.delete(`http://localhost:3005/compare/delete/${id}`,{
+    return axios.delete(`http://localhost:3008/compare/delete/${id}`,{
         headers:{
             "Authorization":`Bearer ${localStorage.getItem("token_key")}`
         }
