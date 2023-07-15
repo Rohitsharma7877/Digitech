@@ -117,6 +117,23 @@ var settings = {
         </Slider>
       </Box>
           
+
+          // if (Array.isArray(data)) {
+          //   data.map((item) => {
+          //     // Map logic
+          //   });
+          // } else {
+          //   // Handle the case when data is not an array
+          // }
+
+          // if (!data) {
+          //   return <div>Loading...</div>;
+          // }
+          
+          // return (
+          //   // Render the component using the data
+          // );
+          
           
           
           

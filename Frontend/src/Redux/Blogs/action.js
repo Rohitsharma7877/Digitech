@@ -25,7 +25,7 @@ const getBlog=(dispatch)=> {
 
 const postBlog=(data)=>(dispatch)=>{
     dispatch({type:types.Post_Blog_Request})
-    return axios.post(`http://localhost:3008/blogs/newpost`,data)
+    return axios.post(`http://localhost:3008/newpost`,data)
     .then((res)=>{dispatch({type:types.Post_Blog_Success})
         console.log(res)
     })
