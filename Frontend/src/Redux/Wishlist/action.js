@@ -5,7 +5,7 @@ const getwish=(dispatch)=> {
  
     dispatch({type:types.Get_Wish_Request})
       
-    return axios.get('https://weary-slug-galoshes.cyclic.app/wish/',{
+    return axios.get('http://localhost:3008/wish/',{
         headers:{
             "Authorization":`Bearer ${localStorage.getItem("token_key")}`
         }
@@ -29,7 +29,7 @@ const getwish=(dispatch)=> {
 
 const postwish=(data)=>(dispatch)=>{
     dispatch({type:types.Post_Wish_Request})
-    return axios.post(`https://weary-slug-galoshes.cyclic.app/wish/newpost/`,data,{
+    return axios.post(`http://localhost:3008/wish/newpost/`,data,{
         headers:{
             "Authorization":`Bearer ${localStorage.getItem("token_key")}`
         }
@@ -45,7 +45,7 @@ const postwish=(data)=>(dispatch)=>{
 
 const deletewish=(id)=>(dispatch)=>{
     dispatch({type:types.Delete_Wish_Request})
-    return axios.delete(`https://weary-slug-galoshes.cyclic.app/wish/delete/${id}`,{
+    return axios.delete(`http://localhost:3008/wish/delete/${id}`,{
         headers:{
             "Authorization":`Bearer ${localStorage.getItem("token_key")}`
         }
