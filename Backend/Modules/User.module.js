@@ -5,10 +5,7 @@ const UserSchema=mongoose.Schema({
     Avatar:String,
     Name:String,
     Email:String,
-    Password:String,
-    date:String,
-    time:String
-   
+    Password:String  
 
 })
 
